@@ -1,0 +1,57 @@
+/* =============
+    Hero
+============= */
+#herobg {
+    background-color: $peach;
+    margin: -44px 40px 0 0;
+    height: 100vh;
+    @include md {
+        // height: 65vh;
+    }
+
+}
+#hero {
+
+    background-image: url("../img/hero/hero.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 105vh;
+    margin-top: -100vh;
+
+    text-align: center;
+
+    @include md {
+        background-image: url("../img/hero/heromd.svg");
+        margin-top: -110vh;
+        height: 115vh;
+    }
+
+    @include lg {
+        background-image: url("../img/hero/herolg.svg");
+        margin-top: -130vh;
+        height: 136vh;
+    }
+
+    h1 {
+        padding: 55vh 0 160px;
+        font-size: rem-calc(30);
+
+        @include md {
+            padding: 60vh 0 150px;
+        }
+        @include lg {
+            font-size: rem-calc(40);
+            padding: 80vh 0 150px;
+        }
+    }
+
+    a {
+        font-family: 'Marcellus', serif;
+        color: $red;
+        border: 1px solid $red;
+        padding: 7px 20px;
+    }
+
+
+}

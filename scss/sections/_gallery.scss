@@ -1,0 +1,177 @@
+/* =============
+    Gallery
+============= */
+
+#gallerybg {
+    background-color: $peach;
+    height: 2850px;
+    margin-left: 20px;
+    margin-top: 60px;
+    margin-bottom: -2910px;
+
+    @include sm {
+        height: 3950px;
+        margin-bottom: -4010px;
+    }
+    @include md {
+        height: 1400px;
+        margin-bottom: -1460px;
+        margin-left: 40px;
+    }
+
+    @include lg {
+        height: 2000px;
+        margin-bottom: -2060px;
+        margin-left: 40px;
+    }
+    @include xl {
+        height: 2300px;
+        margin-bottom: -2360px;
+        margin-left: 40px;
+    }
+
+
+}
+
+#gallery {
+
+    ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto 20px;
+        grid-template-rows: repeat(6, 50vh);
+        grid-template-areas:
+        "photo1 ."
+        "photo2 ."
+        "photo3 ."
+        "photo4 ."
+        "photo5 ."
+        "photo6 .";
+
+        @include sm {
+            grid-template-rows: repeat(6, 70vh);
+        }
+
+        @include md {
+            grid-template-columns: auto auto 20px;
+            grid-template-rows: repeat(10, 120px);
+            grid-template-areas:
+            "photo1 . ."
+            "photo1 photo2 ."
+            "photo1 photo2 ."
+            "photo3 photo2 ."
+            "photo3 photo4 ."
+            "photo3 photo4 ."
+            "photo5 photo4 ."
+            "photo5 photo6 ."
+            "photo5 photo6 ."
+            ". photo6 .";
+        }
+
+        @include lg {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(20, 100px);
+            grid-gap: 0;
+        }
+        @include xl {
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(23, 100px);
+        }
+
+    }
+
+    li:nth-child(1) {
+        grid-area: photo1;
+        background-image: url("../img/gallery/photo1.jpg");
+        @include lg {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 7;
+        }
+        @include xl {
+            grid-column: 1 / span 6;
+            grid-row: 1 / span 7;
+        }
+    }
+
+    li:nth-child(2) {
+        grid-area: photo2;
+        background-image: url("../img/gallery/photo2.jpg");
+        @include lg {
+            grid-column: 8 / span 3;
+            grid-row: 12 / span 4;
+        }
+        @include xl {
+            grid-column: 11 / span 6;
+            grid-row: 12 / span 6;
+            margin-right: 40px;
+        }
+    }
+
+    li:nth-child(3) {
+        grid-area: photo3;
+        background-image: url("../img/gallery/photo3.jpg");
+        @include lg {
+            grid-column: 3 / span 6;
+            grid-row: 6 / span 8;
+        }
+
+        @include xl {
+            grid-column: 5 / span 8;
+            grid-row: 7 / span 8;
+        }
+
+    }
+
+    li:nth-child(4) {
+        grid-area: photo4;
+        background-image: url("../img/gallery/photo4.jpg");
+        @include lg {
+            grid-column: 7 / span 4;
+            grid-row: 4 / span 5;
+            margin-right: 40px;
+        }
+        @include xl {
+            grid-column: 10 / span 5;
+            grid-row: 4 / span 5;
+            margin-right: 0;
+        }
+
+    }
+
+    li:nth-child(5) {
+        grid-area: photo5;
+        background-image: url("../img/gallery/photo5.jpg");
+        @include lg {
+            grid-column: 2 / span 5;
+            grid-row: 13 / span 6;
+        }
+        @include xl {
+            grid-column: 3 / span 6;
+            grid-row: 14 / span 6;
+        }
+
+    }
+
+    li:nth-child(6) {
+        grid-area: photo6;
+        background-image: url("../img/gallery/photo6.jpg");
+        @include lg {
+            grid-column: 6 / span 3;
+            grid-row: 17 / span 4;
+        }
+        @include xl {
+            grid-column: 7 / span 5;
+            grid-row: 19 / span 5;
+        }
+
+    }
+
+    li {
+        background-size: cover;
+        background-position: 60% 50%;
+
+
+    }
+
+}

@@ -1,0 +1,89 @@
+/* =============
+    Form
+============= */
+
+#form {
+    padding-top: 150px;
+    .content {
+        @include lg {
+            display: grid;
+            grid-template-columns: 10% auto auto 10%;
+            grid-template-areas: ". text form ."
+        }
+        @include xl {
+
+            grid-template-columns: auto 330px 330px auto;
+            grid-template-areas: ". text form ."
+        }
+    }
+
+    article {
+        @include lg {
+            grid-area: text;
+
+        }
+    }
+    h1 {
+        text-align: center;
+
+        @include md {
+            font-size: rem-calc(60);
+
+        }
+        @include lg {
+            font-size: rem-calc(36);
+            text-align: left;
+        }
+
+    }
+    h2 {
+        text-align: center;
+        font-family: 'Marcellus', serif;
+        font-size: rem-calc(18);
+        font-weight: 400;
+        padding: 10px 0;
+
+        @include md {
+            font-size: rem-calc(30);
+        }
+
+        @include lg {
+            font-size: rem-calc(20);
+            text-align: left;
+
+        }
+
+
+    }
+
+    form{
+        @include lg{
+            grid-area: form;
+        }
+        label{
+            margin: 0;
+        }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $black;
+  box-sizing: border-box;
+  margin-top: 6px;
+  resize: vertical;
+  @include lg {
+      box-sizing: content-box;
+  }
+}
+input[type=submit] {
+font-family: 'Marcellus', serif;
+  background-color: $red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+}
+}

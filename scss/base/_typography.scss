@@ -1,0 +1,12 @@
+/* =============
+    Typography
+============= */
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+h1 {
+    font-family: 'Marcellus', serif;
+    color: $red;
+    font-weight: 400;
+    font-size: rem-calc(30);
+}

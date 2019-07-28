@@ -1,0 +1,78 @@
+/* =============
+    Why
+============= */
+
+#why {
+    font-family: 'Marcellus', serif;
+    font-size: rem-calc(18);
+    line-height: 24px;
+    text-align: right;
+
+    #gridtest {
+        @include sm {
+            display: grid;
+            grid-template-columns: 28% auto;
+            grid-template-areas: ". text";
+        }
+
+        @include md {
+            grid-template-columns: 50% auto;
+        }
+        @include lg {
+            grid-template-columns: 50% auto 10%;
+            grid-template-areas: ". text .";
+        }
+        @include xl {
+            grid-template-columns: auto 330px 15%;
+            grid-template-areas: ". text .";
+        }
+    }
+
+    #gridarrow {
+        @include xl{
+        display: grid;
+        grid-template-columns: auto 660px auto;
+        grid-template-areas: ". arrow .";
+    }
+    }
+
+    #arrow {
+        margin-top: 20px;
+        background-image: url("../img/why/why.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 550px;
+
+        @include md {
+            background-image: url("../img/why/whymd.svg");
+            margin-top: 30px;
+        }
+
+        @include lg {
+            background-image: url("../img/why/whylg.svg");
+        }
+
+        @include xl {
+            background-image: url("../img/why/whyxl.svg");
+            grid-area: arrow;
+
+        }
+
+
+
+    }
+
+    p {
+        @include sm {
+            grid-area: text;
+        }
+    }
+
+
+
+
+
+
+
+}

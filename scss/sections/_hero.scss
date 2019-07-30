@@ -3,10 +3,10 @@
 ============= */
 #herobg {
     background-color: $peach;
-    margin: -44px 40px 0 0;
+    margin: -160px 40px 0 0;
     height: 100vh;
     @include md {
-        // height: 65vh;
+        margin-top: -100px;
     }
 
 }
@@ -46,11 +46,16 @@
         }
     }
 
-    a {
+    a:link, a:visited {
         font-family: 'Marcellus', serif;
         color: $red;
         border: 1px solid $red;
         padding: 7px 20px;
+    }
+
+    a:hover, a:active {
+        background-color: $red;
+        color: $white;
     }
 
 

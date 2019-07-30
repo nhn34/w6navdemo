@@ -374,13 +374,66 @@ textarea {
 /* =============
     Navigation
 ============= */
+header ul {
+  font-family: 'Marcellus', serif;
+  margin: 10px 0 10px 10px; }
+  @media (min-width: 703px) {
+    header ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center; } }
+  header ul li a:link, header ul li a:visited {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 0; }
+    @media (min-width: 703px) {
+      header ul li a:link, header ul li a:visited {
+        padding: 20px 10px 0;
+        color: #000; } }
+  header ul li a:hover, header ul li a:active {
+    color: #F2D2C3; }
+    @media (min-width: 703px) {
+      header ul li a:hover, header ul li a:active {
+        color: #FC3C2D; } }
+
 /* =============
     Header
 ============= */
+header div {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-areas: "bars ." "nav nav"; }
+  header div section:nth-child(1) {
+    grid-area: bars; }
+    @media (min-width: 703px) {
+      header div section:nth-child(1) {
+        display: none; } }
+    header div section:nth-child(1) button {
+      background-color: #F2D2C3;
+      border: none;
+      outline: none;
+      padding: 0 0 10px 0; }
+  header div nav {
+    grid-area: nav;
+    background-color: #FC3C2D;
+    margin: 0 0 0 20px; }
+    @media (min-width: 703px) {
+      header div nav {
+        background-color: inherit;
+        display: block !important; } }
+    header div nav ul {
+      font-family: 'Marcellus', serif;
+      margin: 10px 0 10px 10px; }
+      header div nav ul a {
+        display: inline-block;
+        color: #fff;
+        padding: 5px 0; }
+
 header i {
   font-size: 1.5rem;
   margin-top: 20px;
-  color: #000; }
+  color: #000;
+  padding-left: 20px; }
 
 /* =============
     Footer
@@ -396,8 +449,11 @@ footer {
 ============= */
 #herobg {
   background-color: #F2D2C3;
-  margin: -44px 40px 0 0;
+  margin: -160px 40px 0 0;
   height: 100vh; }
+  @media (min-width: 703px) {
+    #herobg {
+      margin-top: -100px; } }
 
 #hero {
   background-image: url("../img/hero/hero.svg");
@@ -427,11 +483,14 @@ footer {
       #hero h1 {
         font-size: 2.5rem;
         padding: 80vh 0 150px; } }
-  #hero a {
+  #hero a:link, #hero a:visited {
     font-family: 'Marcellus', serif;
     color: #FC3C2D;
     border: 1px solid #FC3C2D;
     padding: 7px 20px; }
+  #hero a:hover, #hero a:active {
+    background-color: #FC3C2D;
+    color: #fff; }
 
 /* =============
     Why

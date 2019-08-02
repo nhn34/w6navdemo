@@ -3,11 +3,9 @@
 ============= */
 #herobg {
     background-color: $peach;
-    margin: -160px 40px 0 0;
+    margin: 0 40px 0 0;
     height: 100vh;
-    @include md {
-        margin-top: -100px;
-    }
+
 
 }
 #hero {

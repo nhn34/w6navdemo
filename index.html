@@ -14,8 +14,53 @@
 </head>
 
 <body>
+
+    <!-- Your options for data-navigation-position is: left | right -->
+    <!-- Your options for data-navigation-slide is: over | under | push -->
+    <section id="off-canvas-container" data-navigation-position="left" data-navigation-slide="over">
+        <div>
+            <button>
+                <i class="far fa-times-circle" id="close-btn"></i>
+            </button>
+
+
+            <div id="nav-container">
+                <nav data-nav="main-navigation">
+
+                    <ul>
+                        <li><a href="#cancerhero">WHY</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#form">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <article>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- burger icon -->
+    <!-- The burger icon needs to be outside of the main tag if you are going to position fix it. -->
+    <header>
+        <section>
+            <button id="burger-icon" data-fixed="fixed-item">
+                <i class="fas fa-bars"></i>
+            </button>
+        </section>
+    </header>
+
+    <!--
+    *************** Your website content goes here! ***************
+    -->
     <main>
-        <header>
+        <!-- <header>
             <div>
             <section>
                 <button id="burger-icon">
@@ -30,7 +75,7 @@
                 </ul>
             </nav>
         </div>
-        </header>
+        </header> -->
 
         <section id="herobg">
 

@@ -1,41 +1,109 @@
 /* =============
     Navigation
 ============= */
+a:hover,
+a:link {
+    text-decoration: none;
+    transition: 0.25s;
+}
 
-header {
-    ul {
-            font-family: 'Marcellus', serif;
-            margin: 10px 0 10px 10px;
 
-        @include md {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
+#off-canvas-container{
+    /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
 
-        li {
+    background-color: $red;
+    grid-template-columns: 0 auto 0;
+    // padding-top: 20px;
 
-            a:link, a:visited{
-                display: inline-block;
-                color: $white;
-                padding: 5px 0;
+    // width of the off canvas navigation
+    // width: 300px;
 
-            @include md {
-                padding: 20px 10px 0;
-                color: $black;
 
+
+
+    /* close btn */
+    div>button {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        font-size: rem-calc(25);
+        margin-bottom: 20px;
+        text-align: right;
+        transition: 0.25s;
+        width: 100%;
+
+    }
+
+    /* close btn */
+    div>button:hover {
+        // color: $red;
+    }
+
+
+}
+
+#nav-container {
+    nav {
+        ul {
+            li {
+                a:link,
+                a:visited {
+                    color: $white;
+                    font-family: 'Marcellus', serif;
+                    padding: 8px 0;
+                    display: inline-block;
+                    width: 96%;
+                    padding-left: 4%;
+
+                }
+
+                a:active,
+                a:hover {
+                    color: $black;
+                    background-color: $lavender;
+                }
             }
-            }
-
-            a:hover, a:active {
-                color: $peach;
-            @include md {
-                color: $red;
-
-            }
-            }
-
-
         }
     }
+    article {
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 4%;
+            li {
+                a:link, a:visited {
+            font-size: rem-calc(25);
+            padding: 15px 15px 0 0;
+            color: $white;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            color: $green;
+        }
+    }
+
+
+        }
+        }
+}
+
+#burger-icon {
+    background-color: $white;
+    color: $red;
+    border: none;
+    font-size: rem-calc(18);
+    outline: none;
+    padding: 8px 10px;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+#burger-icon:hover {
+    background-color: $red;
+    color: $white;
 }

@@ -354,6 +354,67 @@ h1 {
   font-size: 1.875rem; }
 
 /* =============
+    Off Canvas
+============= */
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #fff; }
+
+#off-canvas-container {
+  background-color: #000;
+  display: grid;
+  grid-template-areas: ". off-canvas .";
+  grid-template-columns: 15px auto 15px;
+  padding-top: 20px;
+  width: 200px;
+  /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
+  #off-canvas-container > div {
+    grid-area: off-canvas; }
+
+#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 1000; }
+
+#off-canvas-container[data-navigation-slide="under"] {
+  height: 100vh;
+  position: fixed;
+  z-index: 5; }
+
+/* left */
+#off-canvas-container[data-navigation-position='left'] {
+  left: 0;
+  top: 0; }
+
+/* right */
+#off-canvas-container[data-navigation-position='right'] {
+  right: 0;
+  top: 0; }
+
+/* ===================
+    Navigation Helpers
+ =================== */
+/* overlay */
+.js-off-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100vw;
+  height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* change the color of the overlay */
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden; }
+
+.is-visible {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+/* =============
     Buttons
 ============= */
 /* =============
@@ -374,66 +435,71 @@ textarea {
 /* =============
     Navigation
 ============= */
-header ul {
-  font-family: 'Marcellus', serif;
-  margin: 10px 0 10px 10px; }
-  @media (min-width: 703px) {
-    header ul {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center; } }
-  header ul li a:link, header ul li a:visited {
-    display: inline-block;
+a:hover,
+a:link {
+  text-decoration: none;
+  transition: 0.25s; }
+
+#off-canvas-container {
+  /* -------------
+        Here are the properties you can changes for the off-canvas navigation-slide
+    ------------- */
+  background-color: #FC3C2D;
+  grid-template-columns: 0 auto 0;
+  /* close btn */
+  /* close btn */ }
+  #off-canvas-container div > button {
+    background-color: transparent;
+    border: none;
     color: #fff;
-    padding: 5px 0; }
-    @media (min-width: 703px) {
-      header ul li a:link, header ul li a:visited {
-        padding: 20px 10px 0;
-        color: #000; } }
-  header ul li a:hover, header ul li a:active {
-    color: #F2D2C3; }
-    @media (min-width: 703px) {
-      header ul li a:hover, header ul li a:active {
-        color: #FC3C2D; } }
+    cursor: pointer;
+    font-size: 1.5625rem;
+    margin-bottom: 20px;
+    text-align: right;
+    transition: 0.25s;
+    width: 100%; }
 
-/* =============
-    Header
-============= */
-header div {
-  display: grid;
-  grid-template-columns: 20% auto;
-  grid-template-areas: "bars ." "nav nav"; }
-  header div section:nth-child(1) {
-    grid-area: bars; }
-    @media (min-width: 703px) {
-      header div section:nth-child(1) {
-        display: none; } }
-    header div section:nth-child(1) button {
-      background-color: #F2D2C3;
-      border: none;
-      outline: none;
-      padding: 0 0 10px 0; }
-  header div nav {
-    grid-area: nav;
-    background-color: #FC3C2D;
-    margin: 0 0 0 20px; }
-    @media (min-width: 703px) {
-      header div nav {
-        background-color: inherit;
-        display: block !important; } }
-    header div nav ul {
-      font-family: 'Marcellus', serif;
-      margin: 10px 0 10px 10px; }
-      header div nav ul a {
-        display: inline-block;
-        color: #fff;
-        padding: 5px 0; }
+#nav-container nav ul li a:link,
+#nav-container nav ul li a:visited {
+  color: #fff;
+  font-family: 'Marcellus', serif;
+  padding: 8px 0;
+  display: inline-block;
+  width: 96%;
+  padding-left: 4%; }
 
-header i {
-  font-size: 1.5rem;
-  margin-top: 20px;
+#nav-container nav ul li a:active,
+#nav-container nav ul li a:hover {
   color: #000;
-  padding-left: 20px; }
+  background-color: #D6CDE9; }
+
+#nav-container article ul {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 4%; }
+  #nav-container article ul li a:link, #nav-container article ul li a:visited {
+    font-size: 1.5625rem;
+    padding: 15px 15px 0 0;
+    color: #fff;
+    display: inline-block; }
+  #nav-container article ul li a:hover, #nav-container article ul li a:active {
+    color: #CDE0CE; }
+
+#burger-icon {
+  background-color: #fff;
+  color: #FC3C2D;
+  border: none;
+  font-size: 1.125rem;
+  outline: none;
+  padding: 8px 10px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 100; }
+
+#burger-icon:hover {
+  background-color: #FC3C2D;
+  color: #fff; }
 
 /* =============
     Footer
@@ -449,11 +515,8 @@ footer {
 ============= */
 #herobg {
   background-color: #F2D2C3;
-  margin: -160px 40px 0 0;
+  margin: 0 40px 0 0;
   height: 100vh; }
-  @media (min-width: 703px) {
-    #herobg {
-      margin-top: -100px; } }
 
 #hero {
   background-image: url("../img/hero/hero.svg");

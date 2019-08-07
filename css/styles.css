@@ -421,19 +421,6 @@ header div {
       header div nav {
         background-color: inherit;
         display: block !important; } }
-    header div nav ul {
-      font-family: 'Marcellus', serif;
-      margin: 10px 0 10px 10px; }
-      header div nav ul a {
-        display: inline-block;
-        color: #fff;
-        padding: 5px 0; }
-
-header i {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  color: #000;
-  padding-left: 20px; }
 
 /* =============
     Footer
@@ -976,3 +963,28 @@ footer {
     cursor: pointer;
     display: block;
     margin: 0 auto; }
+
+/* =============
+    Burger
+============= */
+#burger-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #F2D2C3;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  outline: none;
+  position: relative;
+  width: 30px; }
+  #burger-container div {
+    background-color: #000;
+    height: 3px;
+    position: absolute;
+    width: 100%; }
+  #burger-container div:nth-child(1) {
+    top: 0; }
+  #burger-container div:nth-child(2) {
+    top: 10px; }
+  #burger-container div:nth-child(3) {
+    top: 20px; }

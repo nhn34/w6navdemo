@@ -520,6 +520,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/sections/_burger.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/scss/sections/_burger.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/sections/_cancer.scss": {
 		"aP": 0,
 		"bl": 0,

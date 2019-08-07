@@ -979,7 +979,7 @@ footer {
   width: 30px; }
   #burger-container div {
     background-color: #000;
-    height: 3px;
+    height: 2px;
     position: absolute;
     width: 100%; }
   #burger-container div:nth-child(1) {

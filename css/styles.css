@@ -416,7 +416,8 @@ header div {
   header div nav {
     grid-area: nav;
     background-color: #FC3C2D;
-    margin: 0 0 0 20px; }
+    margin: 0 0 0 20px;
+    display: none; }
     @media (min-width: 703px) {
       header div nav {
         background-color: inherit;

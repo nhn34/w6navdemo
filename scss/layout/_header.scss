@@ -30,6 +30,7 @@ header{
             grid-area: nav;
             background-color: $red;
             margin: 0 0 0 20px;
+            display:none;
 
             @include md {
                 background-color: inherit;
